@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>short-story</title>
+    <style>
+        h1{
+            color:green;
+            text-align: center;
+        }
+        p{
+            width: 40%;
+            margin: 2em 0 0 30%;
+        }
+        button{
+            background-color: green;
+            color: white;
+            padding: 1em;
+            border-radius: 5px;
+            border: none;
+            margin: 1em 0 0 30%;
+        }
+        button:hover{
+            background-color: blue;
+            cursor: pointer;
+        }
+        .hideimages{
+            margin-left: 24.5%;
+        }
+        .image{
+            width: 10em;
+            height: 15em;
+        }      
+        #imageDiv{
+            margin: 2em 0 0 7%;
+            width: fit-content;
+            height: fit-content;
+            /* border-top: 2px dotted blue;*/
+            border-top: 2px;
+            border-left: 2px;
+            border-bottom: 2px;
+            border-right: 2px;
+            border-style: dotted;
+            border-color: blue;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+     <h1>my short story</h1>
+     <p>I go by the name daniel, I am 14 years old my favoutrite sport is basketball and also i like dancing.
+        The name of my school is belary schools,i am in ss1.blah blah blah.
+     </p>
+
+     <button class="seeImages">See Images</button>
+     <button class="hideImages">Hide Images</button>
+     
+     <div id="imagediv">
+       <img class="image" src="./img/AGHIDI EMMANUEL UKIOSEWA.jpg" alt="AGHIDI EMMANUEL UKIOSEWA"> 
+       <img class="image"src="./img/OKOCHA PHILIP OLISAELOKA.jpg" alt="OKOCHA PHILIP OLISAELOKA">
+       <img class="image"src="./img/OKOIHUE DAVID ABUNENE.jpg" alt="OKOIHUE DAVID ABUNEN"> 
+       <img class="image"src="./img/OKONEDO EMMANUEL AVWEROSUOGHENE.jpg" alt="OKONEDO EMMANUEL AVWEROSUOGHENE">
+       <img class="image"src="./img/UDUMEBRAYE KELVIN OGHENEGUEKE.jpg" alt=" UDUMEBRAYE KELVIN OGHENEGUEKE">
+     </div> 
+   </div>
+
+   <script>
+      let seeImages = document.querySelector('.seeImages');
+      let hideImages = document.querySelector('.hideImages');
+      let imageDiv = document.getElementById('imageDiv')
+    
+      seeImages.addEventListener('click', function(ev){
+         imageDiv.style.visibility = 'visible';
+      });
+      
+     hideImages.addEventListener('click', function(ev){
+        imageDiv.style.visibility = 'hidden'
+        ev.preventDefault()
+     })
+   </script>
+    </body>
+</html>
